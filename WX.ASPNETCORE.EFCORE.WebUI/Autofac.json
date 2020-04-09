@@ -1,0 +1,45 @@
+{ 
+  "components": [
+    {
+      "type": "Asp.NetCore.EFCore.Models.Extend.DbContextFactory,Asp.NetCore.EFCore.Models.Models",
+      "services": [
+        {
+          "type": "Asp.NetCore.EFCore.Models.Extend.IDbContextFactory,Asp.NetCore.EFCore.Models.Models"
+        }
+      ],
+      "instanceScope": "single-instance",
+      "injectProperties": true
+    },
+    {
+      "type": "Asp.NetCore.Business.Service.CompanyService,Asp.NetCore.Business.Service",
+      "services": [
+        {
+          "type": "Asp.NetCore.Business.Interface.ICompanyService,Asp.NetCore.Business.Interface"
+        }
+      ],
+      "instanceScope": "single-instance",
+      "injectProperties": true
+    },
+    {
+      "type": "Asp.NetCore.Business.Service.CompanyUserService,Asp.NetCore.Business.Service",
+      "services": [
+        {
+          "type": "Asp.NetCore.Business.Interface.ICompanyUserService,Asp.NetCore.Business.Interface"
+        }
+      ],
+      "instanceScope": "single-instance",
+      "injectProperties": true
+    },
+    {
+      "type": "Asp.NetCore.Business.Service.UserService,Asp.NetCore.Business.Service",
+      "services": [
+        {
+          "type": "Asp.NetCore.Business.Interface.IUserService,Asp.NetCore.Business.Interface"
+        }
+      ],
+      "instanceScope": "single-instance",
+      "injectProperties": true
+    }
+  ]
+}
+

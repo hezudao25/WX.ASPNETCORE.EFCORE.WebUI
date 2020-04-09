@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.1.2" />
+    <PackageReference Include="Autofac.Configuration" Version="5.1.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Asp.NetCore.Business.Interface\WX.AspNetCore.Business.Interface.csproj" />
+    <ProjectReference Include="..\Asp.NetCore.Business.Service\WX.AspNetCore.Business.Service.csproj" />
+    <ProjectReference Include="..\Asp.NetCore.EFCore.Models.Migrations\WX.AspNetCore.EFCore.Models.Migrations.csproj" />
+    <ProjectReference Include="..\Asp.NetCore.EFCore.Models\WX.AspNetCore.EFCore.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Autofac.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+
+
+</Project>

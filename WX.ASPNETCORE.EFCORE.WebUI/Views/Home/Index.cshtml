@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using Asp.NetCore.EFCore.Models.Models;
+@{
+    List<SysUserInfo> userlist = base.ViewBag.ReadWriteList as List<SysUserInfo>;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>表格操作 - layui</title>
+    <link href="~/css/src/css/layui.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="padding:0px 30px 0px 30px">
+        <table class="layui-table" lay-skin="line" lay-filter="parse-table-demo">
+            <thead>
+                <tr>
+                    <th lay-data="{checkbox:true}">Id</th>
+                    <th lay-data="{field:'username', width:200}">用户名</th>
+                    <th lay-data="{field:'joinTime', width:150}">年龄</th>
+                    <th lay-data="{field:'sign'}">创建时间</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var user in userlist)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.Mobile</td>
+                        <td> </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+<div class="text-center">
+    <div>
+        @base.ViewBag.Readuser
+    </div>
+    <div>
+        @base.ViewBag.Writeuser
+    </div>
+    <div>
+        @base.ViewBag.ReadWriteuserInfo
+    </div>
+    <div>
+        @base.ViewBag.ReadWrite
+    </div>
+</div>
